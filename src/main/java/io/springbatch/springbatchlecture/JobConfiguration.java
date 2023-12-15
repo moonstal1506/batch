@@ -31,14 +31,6 @@ public class JobConfiguration {
     public Step step1() {
         return stepBuilderFactory.get("step1")
                 .tasklet((stepContribution, chunkContext) -> {
-                    JobParameters jobParameters = stepContribution.getStepExecution().getJobExecution().getJobParameters();
-                    jobParameters.getString("name");
-                    jobParameters.getLong("seq");
-                    jobParameters.getDate("date");
-                    jobParameters.getDouble("age");
-
-                    Map<String, Object> jobParameters1 = chunkContext.getStepContext().getJobParameters();
-
                     System.out.println("======================");
                     System.out.println(">> Job");
                     System.out.println("======================");
@@ -54,6 +46,9 @@ public class JobConfiguration {
                     System.out.println("======================");
                     System.out.println(">> Job2");
                     System.out.println("======================");
+                    // job instance already exists고 COMPLETED면 Error
+                    // JobExecution FAILED -> 재시도 가능
+//                    throw new RuntimeException("Job2 실패");
                     return RepeatStatus.FINISHED; //한번 실행 후 종료
                 })
                 .build();
