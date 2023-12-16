@@ -24,6 +24,7 @@ public class JobConfiguration {
         return jobBuilderFactory.get("job")
                 .start(step1())
                 .next(step2())
+                .next(step3())
                 .build(); //job에 2개의 step을 저장 -> jobLuncher가 실행
     }
 
@@ -44,6 +45,18 @@ public class JobConfiguration {
                     // job instance already exists고 COMPLETED면 Error
                     // JobExecution FAILED -> 재시도 가능
 //                    throw new RuntimeException("Job2 실패");
+                    return RepeatStatus.FINISHED; //한번 실행 후 종료
+                })
+                .build();
+    }
+
+    @Bean
+    public Step step3() {
+        return stepBuilderFactory.get("step3")
+                .tasklet((stepContribution, chunkContext) -> {
+                    System.out.println("======================");
+                    System.out.println(">> Job3");
+                    System.out.println("======================");
                     return RepeatStatus.FINISHED; //한번 실행 후 종료
                 })
                 .build();
