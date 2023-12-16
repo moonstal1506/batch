@@ -30,12 +30,7 @@ public class JobConfiguration {
     @Bean
     public Step step1() {
         return stepBuilderFactory.get("step1")
-                .tasklet((stepContribution, chunkContext) -> {
-                    System.out.println("======================");
-                    System.out.println(">> Job");
-                    System.out.println("======================");
-                    return RepeatStatus.FINISHED; //한번 실행 후 종료
-                })
+                .tasklet(new CustomTasklet())
                 .build();
     }
 
