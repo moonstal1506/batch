@@ -2,7 +2,6 @@ package io.springbatch.springbatchlecture;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.batch.core.Job;
-import org.springframework.batch.core.JobParameters;
 import org.springframework.batch.core.Step;
 import org.springframework.batch.core.configuration.annotation.JobBuilderFactory;
 import org.springframework.batch.core.configuration.annotation.StepBuilderFactory;
@@ -10,14 +9,16 @@ import org.springframework.batch.repeat.RepeatStatus;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import java.util.Map;
-
 @RequiredArgsConstructor
 @Configuration
 public class JobConfiguration {
 
     private final JobBuilderFactory jobBuilderFactory;
     private final StepBuilderFactory stepBuilderFactory;
+    private final ExecutionContextTasklet1 executionContextTasklet1;
+    private final ExecutionContextTasklet2 executionContextTasklet2;
+    private final ExecutionContextTasklet3 executionContextTasklet3;
+    private final ExecutionContextTasklet4 executionContextTasklet4;
 
     @Bean
     public Job job() { //SimpleJob(설계도)
@@ -25,40 +26,36 @@ public class JobConfiguration {
                 .start(step1())
                 .next(step2())
                 .next(step3())
+                .next(step4())
                 .build(); //job에 2개의 step을 저장 -> jobLuncher가 실행
     }
 
     @Bean
     public Step step1() {
         return stepBuilderFactory.get("step1")
-                .tasklet(new CustomTasklet())
+                .tasklet(executionContextTasklet1)
                 .build();
     }
 
     @Bean
     public Step step2() {
         return stepBuilderFactory.get("step2")
-                .tasklet((stepContribution, chunkContext) -> {
-                    System.out.println("======================");
-                    System.out.println(">> Job2");
-                    System.out.println("======================");
-                    // job instance already exists고 COMPLETED면 Error
-                    // JobExecution FAILED -> 재시도 가능
-//                    throw new RuntimeException("Job2 실패");
-                    return RepeatStatus.FINISHED; //한번 실행 후 종료
-                })
+                .tasklet(executionContextTasklet2)
                 .build();
     }
 
     @Bean
     public Step step3() {
         return stepBuilderFactory.get("step3")
-                .tasklet((stepContribution, chunkContext) -> {
-                    System.out.println("======================");
-                    System.out.println(">> Job3");
-                    System.out.println("======================");
-                    return RepeatStatus.FINISHED; //한번 실행 후 종료
-                })
+                .tasklet(executionContextTasklet3)
                 .build();
     }
+
+    @Bean
+    public Step step4() {
+        return stepBuilderFactory.get("step4")
+                .tasklet(executionContextTasklet4)
+                .build();
+    }
+
 }
