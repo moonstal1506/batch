@@ -24,8 +24,8 @@ spring:
     jdbc:
       initialize-schema: always
 #      table-prefix: SYSTEM_ # 기본 BATCH_
-    job:
-      names: ${job.name:NONE} #동적으로 바인딩 --job.name=batchJob name=user1
+#    job:
+#      names: ${job.name:NONE} #동적으로 바인딩 --job.name=batchJob name=user1
   #      names: batchJob #하드코딩x
   #      enabled: false #자동실행x
   config:
