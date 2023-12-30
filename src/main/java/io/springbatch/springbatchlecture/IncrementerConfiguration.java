@@ -5,26 +5,25 @@ import org.springframework.batch.core.Job;
 import org.springframework.batch.core.Step;
 import org.springframework.batch.core.configuration.annotation.JobBuilderFactory;
 import org.springframework.batch.core.configuration.annotation.StepBuilderFactory;
-import org.springframework.batch.core.job.DefaultJobParametersValidator;
-import org.springframework.batch.core.job.builder.FlowBuilder;
-import org.springframework.batch.core.job.flow.Flow;
+import org.springframework.batch.core.launch.support.RunIdIncrementer;
 import org.springframework.batch.repeat.RepeatStatus;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @RequiredArgsConstructor
-//@Configuration
-public class JobConfiguration3 {
+@Configuration
+public class IncrementerConfiguration {
 
     private final JobBuilderFactory jobBuilderFactory;
     private final StepBuilderFactory stepBuilderFactory;
 
     @Bean
     public Job job() { //SimpleJob(설계도)
-        return jobBuilderFactory.get("batchJob3")
+        return jobBuilderFactory.get("incrementer")
                 .start(step1())
                 .next(step2())
-                .preventRestart() //기본 재시작 false
+//                .incrementer(new CustomJobParametersIncrementer()) //job을 여러번 실행하고자 할 때
+                .incrementer(new RunIdIncrementer())
                 .build(); //job에 2개의 step을 저장 -> jobLuncher가 실행
     }
 
@@ -44,7 +43,6 @@ public class JobConfiguration3 {
         return stepBuilderFactory.get("step2")
                 .tasklet((stepContribution, chunkContext) -> {
                     System.out.println("step2");
-//                    throw new RuntimeException("step2 was failed");
                     return RepeatStatus.FINISHED;
                 })
                 .build();
