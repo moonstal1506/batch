@@ -16,7 +16,7 @@ import org.springframework.context.annotation.Configuration;
 import java.util.List;
 
 @RequiredArgsConstructor
-@Configuration
+//@Configuration
 public class StepBuilderConfiguration {
 
     private final JobBuilderFactory jobBuilderFactory;
