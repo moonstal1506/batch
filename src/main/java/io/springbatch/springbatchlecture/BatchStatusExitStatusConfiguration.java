@@ -11,7 +11,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @RequiredArgsConstructor
-@Configuration
+//@Configuration
 public class BatchStatusExitStatusConfiguration {
 
     private final JobBuilderFactory jobBuilderFactory;
