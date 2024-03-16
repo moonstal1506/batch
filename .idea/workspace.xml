@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="9e21c163-9d54-459c-bcaa-c8ac61e13415" name="Changes" comment="@JobScope / @StepScope - 기본개념 및 설정">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/MavenWrapperDownloader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/springbatch/springbatchlecture/BatchStatusExitStatusConfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/springbatch/springbatchlecture/CustomBatchConfigurer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/springbatch/springbatchlecture/CustomDecider.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/springbatch/springbatchlecture/CustomExitStatusConfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/springbatch/springbatchlecture/CustomJobListener.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/springbatch/springbatchlecture/CustomJobParametersIncrementer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/springbatch/springbatchlecture/CustomJobParametersValidator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/springbatch/springbatchlecture/CustomStepListener.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/springbatch/springbatchlecture/CustomTasklet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/springbatch/springbatchlecture/ExecutionContextTasklet1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/springbatch/springbatchlecture/ExecutionContextTasklet2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/springbatch/springbatchlecture/ExecutionContextTasklet3.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/springbatch/springbatchlecture/ExecutionContextTasklet4.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/springbatch/springbatchlecture/FlowJobConfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/springbatch/springbatchlecture/FlowJobConfiguration2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/springbatch/springbatchlecture/FlowStepConfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/springbatch/springbatchlecture/IncrementerConfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/springbatch/springbatchlecture/JobConfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/springbatch/springbatchlecture/JobConfiguration2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/springbatch/springbatchlecture/JobConfiguration3.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/springbatch/springbatchlecture/JobExecutionDeciderConfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/springbatch/springbatchlecture/JobLauncherController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/springbatch/springbatchlecture/JobRepositoryListener.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/springbatch/springbatchlecture/JobRunner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/springbatch/springbatchlecture/JobScopeStepScopeConfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/springbatch/springbatchlecture/JobStepConfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/springbatch/springbatchlecture/LimitAllowConfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/springbatch/springbatchlecture/Member.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/springbatch/springbatchlecture/PassCheckingListener.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/springbatch/springbatchlecture/SpringBatchLectureApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/springbatch/springbatchlecture/StartNextConfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/springbatch/springbatchlecture/StepBuilderConfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/springbatch/springbatchlecture/TaskletConfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/springbatch/springbatchlecture/TaskletStepConfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/springbatch/springbatchlecture/TransitionConfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/io/springbatch/springbatchlecture/SpringBatchLectureApplicationTests.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Use Maven wrapper" />
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2ZAuwpzjHTAKxOcCsJQit1blQS8" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/study/batch/batch-application",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle",
+    "spring.configuration.checksum": "f04ba12cbf3b48018488a22d4c572fb6"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="io.springbatch.springbatchlecture" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\study\batch\src\main\java\io\springbatch\springbatchlecture" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="io.springbatch.springbatchlecture" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.SpringBatchLectureApplication">
+    <configuration name="generated-requests | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" requestIdentifier="#1" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="SpringBatchLectureApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <option name="ACTIVE_PROFILES" value="mysql" />
+      <module name="spring-batch-lecture" />
+      <option name="PROGRAM_PARAMETERS" value="--job.name=batchJob5 message=20202020" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="io.springbatch.springbatchlecture.SpringBatchLectureApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="HTTP Request.generated-requests | #1" />
+      <item itemvalue="Spring Boot.SpringBatchLectureApplication" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="HTTP Request.generated-requests | #1" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9e21c163-9d54-459c-bcaa-c8ac61e13415" name="Changes" comment="" />
+      <created>1701877455966</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1701877455966</updated>
+      <workItem from="1701877459882" duration="1464000" />
+      <workItem from="1701946221090" duration="3045000" />
+      <workItem from="1702192334061" duration="661000" />
+      <workItem from="1702444767667" duration="2623000" />
+      <workItem from="1702537540823" duration="1759000" />
+      <workItem from="1702607253098" duration="2165000" />
+      <workItem from="1702617188526" duration="1852000" />
+      <workItem from="1702696469605" duration="1710000" />
+      <workItem from="1702744121453" duration="444000" />
+      <workItem from="1702902773242" duration="5315000" />
+      <workItem from="1703069017276" duration="4086000" />
+      <workItem from="1703254681987" duration="1551000" />
+      <workItem from="1703339932897" duration="1751000" />
+      <workItem from="1703345010051" duration="8000" />
+      <workItem from="1703410614926" duration="599000" />
+      <workItem from="1703415286239" duration="1806000" />
+      <workItem from="1703475232260" duration="2457000" />
+      <workItem from="1703748245829" duration="1443000" />
+      <workItem from="1703773601002" duration="5000" />
+      <workItem from="1703778286456" duration="1127000" />
+      <workItem from="1703781159384" duration="162000" />
+      <workItem from="1703816904776" duration="636000" />
+      <workItem from="1703940833322" duration="1734000" />
+      <workItem from="1704095619548" duration="1056000" />
+      <workItem from="1704191082589" duration="1398000" />
+      <workItem from="1704212179569" duration="1056000" />
+      <workItem from="1704445111143" duration="740000" />
+      <workItem from="1704474141364" duration="30000" />
+      <workItem from="1704604069958" duration="601000" />
+      <workItem from="1704724150449" duration="1868000" />
+      <workItem from="1704774539686" duration="610000" />
+      <workItem from="1704796040352" duration="1286000" />
+      <workItem from="1705240565028" duration="649000" />
+      <workItem from="1705241239269" duration="5000" />
+      <workItem from="1705493126607" duration="472000" />
+      <workItem from="1705721876600" duration="1332000" />
+      <workItem from="1705812197830" duration="843000" />
+      <workItem from="1705814042977" duration="600000" />
+      <workItem from="1705815805612" duration="979000" />
+      <workItem from="1705932202742" duration="1217000" />
+      <workItem from="1705935376590" duration="21000" />
+      <workItem from="1706015520963" duration="737000" />
+      <workItem from="1706330300358" duration="10000" />
+      <workItem from="1706532867173" duration="753000" />
+      <workItem from="1707140405096" duration="1413000" />
+      <workItem from="1711187541519" duration="256000" />
+    </task>
+    <task id="LOCAL-00001" summary="Hello Spring Batch">
+      <created>1701878904381</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1701878904381</updated>
+    </task>
+    <task id="LOCAL-00002" summary="DB 스키마 생성 및 이해">
+      <created>1701949410428</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1701949410428</updated>
+    </task>
+    <task id="LOCAL-00003" summary="JobInstance">
+      <created>1702447101164</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1702447101165</updated>
+    </task>
+    <task id="LOCAL-00004" summary="JobParameter">
+      <created>1702539288820</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1702539288820</updated>
+    </task>
+    <task id="LOCAL-00005" summary="JobExecution">
+      <created>1702608817824</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1702608817824</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Step">
+      <created>1702697579531</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1702697579531</updated>
+    </task>
+    <task id="LOCAL-00007" summary="StepExecution">
+      <created>1702744558337</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1702744558337</updated>
+    </task>
+    <task id="LOCAL-00008" summary="ExecutionContext">
+      <created>1702904899210</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1702904899210</updated>
+    </task>
+    <task id="LOCAL-00009" summary="JobRepository">
+      <created>1702915914397</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1702915914397</updated>
+    </task>
+    <task id="LOCAL-00010" summary="JobLauncher">
+      <created>1703073441786</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1703073441786</updated>
+    </task>
+    <task id="LOCAL-00011" summary="배치 초기화 설정">
+      <created>1703255630228</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1703255630228</updated>
+    </task>
+    <task id="LOCAL-00012" summary="SimpleJob - 개념 및 API 소개">
+      <created>1703416481704</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1703416481704</updated>
+    </task>
+    <task id="LOCAL-00013" summary="SimpleJob - validator()">
+      <created>1703477704102</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1703477704102</updated>
+    </task>
+    <task id="LOCAL-00014" summary="SimpleJob - preventRestart()">
+      <created>1703749087210</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1703749087211</updated>
+    </task>
+    <task id="LOCAL-00015" summary="SimpleJob - incrementer()">
+      <created>1703941964578</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1703941964578</updated>
+    </task>
+    <task id="LOCAL-00016" summary="StepBuilderFactory">
+      <created>1704096670172</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1704096670172</updated>
+    </task>
+    <task id="LOCAL-00017" summary="TaskletStep - 개념 및 API 소개">
+      <created>1704192772676</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1704192772676</updated>
+    </task>
+    <task id="LOCAL-00018" summary="TaskletStep - tasklet()">
+      <created>1704212634285</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1704212634285</updated>
+    </task>
+    <task id="LOCAL-00019" summary="TaskletStep - startLimit() / allowStartIfComplete()">
+      <created>1704445836845</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1704445836845</updated>
+    </task>
+    <task id="LOCAL-00020" summary="JobStep">
+      <created>1704725418836</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1704725418836</updated>
+    </task>
+    <task id="LOCAL-00021" summary="FlowJob - 개념 및 API 소개">
+      <created>1704796847225</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1704796847225</updated>
+    </task>
+    <task id="LOCAL-00022" summary="FlowJob - start() / next()">
+      <created>1705241202846</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1705241202846</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Transition - 배치상태 유형 (BatchStatus / ExitStatus / FlowExecutionStatus)">
+      <created>1705493587538</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1705493587538</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Transition - on() / to() / stop(), fail(), end(), stopAndRestart()">
+      <created>1705723167939</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1705723167939</updated>
+    </task>
+    <task id="LOCAL-00025" summary="사용자 정의 ExitStatus">
+      <created>1705813026541</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1705813026541</updated>
+    </task>
+    <task id="LOCAL-00026" summary="JobExecutionDecider">
+      <created>1705933407315</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1705933407315</updated>
+    </task>
+    <task id="LOCAL-00027" summary="FlowJob 아키텍처">
+      <created>1706016243722</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1706016243722</updated>
+    </task>
+    <task id="LOCAL-00028" summary="FlowStep">
+      <created>1706533383286</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1706533383286</updated>
+    </task>
+    <task id="LOCAL-00029" summary="@JobScope / @StepScope - 기본개념 및 설정">
+      <created>1707141756692</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1707141756692</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="JobExecution" />
+    <MESSAGE value="Step" />
+    <MESSAGE value="StepExecution" />
+    <MESSAGE value="ExecutionContext" />
+    <MESSAGE value="JobRepository" />
+    <MESSAGE value="JobLauncher" />
+    <MESSAGE value="배치 초기화 설정" />
+    <MESSAGE value="SimpleJob - 개념 및 API 소개" />
+    <MESSAGE value="SimpleJob - validator()" />
+    <MESSAGE value="SimpleJob - preventRestart()" />
+    <MESSAGE value="SimpleJob - incrementer()" />
+    <MESSAGE value="StepBuilderFactory" />
+    <MESSAGE value="TaskletStep - 개념 및 API 소개" />
+    <MESSAGE value="TaskletStep - tasklet()" />
+    <MESSAGE value="TaskletStep - startLimit() / allowStartIfComplete()" />
+    <MESSAGE value="JobStep" />
+    <MESSAGE value="FlowJob - 개념 및 API 소개" />
+    <MESSAGE value="FlowJob - start() / next()" />
+    <MESSAGE value="Transition - 배치상태 유형 (BatchStatus / ExitStatus / FlowExecutionStatus)" />
+    <MESSAGE value="Transition - on() / to() / stop(), fail(), end(), stopAndRestart()" />
+    <MESSAGE value="사용자 정의 ExitStatus" />
+    <MESSAGE value="JobExecutionDecider" />
+    <MESSAGE value="FlowJob 아키텍처" />
+    <MESSAGE value="FlowStep" />
+    <MESSAGE value="@JobScope / @StepScope - 기본개념 및 설정" />
+    <option name="LAST_COMMIT_MESSAGE" value="@JobScope / @StepScope - 기본개념 및 설정" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/batch/spring-batch-core/4.3.3/spring-batch-core-4.3.3.jar!/org/springframework/batch/core/job/builder/JobBuilder.class</url>
+          <line>20</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/batch/spring-batch-core/4.3.3/spring-batch-core-4.3.3.jar!/org/springframework/batch/core/job/DefaultJobParametersValidator.class</url>
+          <line>56</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
