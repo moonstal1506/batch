@@ -13,7 +13,9 @@ import org.springframework.batch.item.database.support.MySqlPagingQueryProvider;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.core.task.TaskExecutor;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
+import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 
 import javax.sql.DataSource;
 import java.util.HashMap;
@@ -29,13 +31,21 @@ public class ApiStepConfiguration {
     private int chunkSize = 10;
 
     @Bean
-    public Step apiMasterStep() {
+    public Step apiMasterStep() throws Exception {
         return stepBuilderFactory.get("apiMasterStep")
                 .partitioner(apiSlaveStep().getName(), partitioner())
                 .step(apiSlaveStep())
                 .gridSize(3)
-                .taskExecutor(taskExecuter())
+                .taskExecutor(taskExecutor())
                 .build();
+    }
+
+    @Bean
+    public TaskExecutor taskExecutor() {
+        ThreadPoolTaskExecutor taskExecutor = new ThreadPoolTaskExecutor();
+        taskExecutor.setCorePoolSize(3);
+        taskExecutor.setMaxPoolSize(3);
+        taskExecutor.setThreadNamePrefix("api-thread-");
     }
 
     @Bean
