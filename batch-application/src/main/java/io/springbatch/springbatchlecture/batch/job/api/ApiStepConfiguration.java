@@ -59,6 +59,7 @@ public class ApiStepConfiguration {
         taskExecutor.setCorePoolSize(3);
         taskExecutor.setMaxPoolSize(3);
         taskExecutor.setThreadNamePrefix("api-thread-");
+        return taskExecutor;
     }
 
     @Bean
