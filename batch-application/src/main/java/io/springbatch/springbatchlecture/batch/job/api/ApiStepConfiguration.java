@@ -11,6 +11,9 @@ import io.springbatch.springbatchlecture.batch.classifier.WriteClassifier;
 import io.springbatch.springbatchlecture.batch.domain.ApiRequestVO;
 import io.springbatch.springbatchlecture.batch.domain.ProductVO;
 import io.springbatch.springbatchlecture.batch.partition.ProductPartitioner;
+import io.springbatch.springbatchlecture.service.ApiService1;
+import io.springbatch.springbatchlecture.service.ApiService2;
+import io.springbatch.springbatchlecture.service.ApiService3;
 import lombok.RequiredArgsConstructor;
 import org.springframework.batch.core.Step;
 import org.springframework.batch.core.configuration.annotation.StepBuilderFactory;
@@ -40,6 +43,9 @@ public class ApiStepConfiguration {
 
     private final StepBuilderFactory stepBuilderFactory;
     private final DataSource dataSource;
+    private final ApiService1 apiService1;
+    private final ApiService2 apiService2;
+    private final ApiService3 apiService3;
 
     private int chunkSize = 10;
 
@@ -124,9 +130,9 @@ public class ApiStepConfiguration {
                 = new ClassifierCompositeItemWriter<>();
         WriteClassifier<ApiRequestVO, ItemWriter<? super ApiRequestVO>> classifier = new WriteClassifier<>();
         Map<String, ItemWriter<ApiRequestVO>> writerMap = new HashMap<>();
-        writerMap.put("1", new ApiItemWriter1());
-        writerMap.put("2", new ApiItemWriter2());
-        writerMap.put("3", new ApiItemWriter3());
+        writerMap.put("1", new ApiItemWriter1(apiService1));
+        writerMap.put("2", new ApiItemWriter2(apiService2));
+        writerMap.put("3", new ApiItemWriter3(apiService3));
 
         classifier.setWriterMap(writerMap);
         writer.setClassifier(classifier);

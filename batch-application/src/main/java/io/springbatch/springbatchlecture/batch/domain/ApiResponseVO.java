@@ -7,7 +7,7 @@ import lombok.Data;
 @Builder
 public class ApiResponseVO {
 
-    private String status;
+    private int status;
     private String msg;
 
 }
